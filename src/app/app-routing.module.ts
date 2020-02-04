@@ -9,7 +9,7 @@ const routes: Routes = [
 
  /*  { path: 'posts', component: PostListComponent },
   { path: 'post/new', component: PostListItemComponent}
-   
+   */
 ];
 
 @NgModule({
