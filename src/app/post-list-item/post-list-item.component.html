@@ -2,8 +2,9 @@
 <li [ngClass]=" {'list-group-item': true, 'list-group-item-success': loveIts > 0, 'list-group-item-danger': loveIts < 0}">
     <span class="date"> {{ created_at | date : "short" }} </span>
     <h2> {{ title }}  </h2>
-    <p> {{ content }} </p>
-    <button class="btn btn-success" (click)="onLike()">Love it</button>      
-    <button class="btn btn-danger ml-2" (click)="onUnLike()">Don't love it</button>
-    <p class="date"> Likes: {{ loveIts }}</p>
+    <p class="mb-0"> {{ content }} </p>
+    <p class="mb-2"><small> {{ loveIts }} Likes</small></p>
+    <button class="btn btn-success btn-sm" (click)="onLike()">Love it</button>      
+    <button class="btn btn-danger ml-2 btn-sm" (click)="onUnLike()">Don't love it</button>
+    <button class="btn btn-danger date btn-sm" (click)="onDelete(post)">Delete post</button>      
 </li>

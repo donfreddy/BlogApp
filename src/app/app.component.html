@@ -2,25 +2,21 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" routerLink="#">Blog</a>
+  <a class="navbar-brand" routerLink="posts">Blog</a>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <ul class="navbar-nav mr-auto ml-auto">
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink="">Posts</a>
+        <a class="nav-link" routerLink="posts">Posts</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" routerLink="new">New Post</a>
       </li>
     </ul>
-  </div>
+  </div>    
 </nav> 
 
-<div class="container">
-  <div class="row mt-5">
-    <h1>Mes posts</h1>
-    <app-post-list [posts]="posts"></app-post-list>
-  </div>
+<div class="container mt-5">
+  <router-outlet></router-outlet> 
 </div>
 
-<!-- <router-outlet></router-outlet> -->
