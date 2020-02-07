@@ -27,9 +27,7 @@ export class PostListItemComponent implements OnInit {
   }
 
   onDelete(post) {
-    this.myService.deletePost(post);
-    console.log('okay');
-    
+    this.myService.deletePost(post); 
   }
 
 }

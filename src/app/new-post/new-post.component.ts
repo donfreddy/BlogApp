@@ -11,6 +11,8 @@ export class NewPostComponent implements OnInit {
 
   public postForm: FormGroup;
 
+  
+
   constructor(private myService: PostService, private fb: FormBuilder) { }
 
   ngOnInit() {
