@@ -6,7 +6,8 @@ import { Post } from './post.model';
 })
 export class PostService {
 
-  allPosts = [
+
+  allPosts: Post[] = [
     {
       title: "Mon premier post",
       content: "hover styles here not present in the previous example. Also supported is the .active state; apply it to indicate an active selection on a contextual list group item",
@@ -29,8 +30,16 @@ export class PostService {
 
   constructor() { }
 
+  like(post: Post): number{
+    return post.loveIts++;
+  }
+
+  unLike(post: Post): number {
+    return post.loveIts--;
+  }
+
   addPost(post: Post) {
-    this.allPosts.push(post)
+    this.allPosts.push(post);
   }
 
   deletePost(index) {
